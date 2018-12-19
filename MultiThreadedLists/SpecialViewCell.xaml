@@ -1,0 +1,17 @@
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
+          x:Class="MultiThreadedLists.SpecialViewCell">
+
+    <StackLayout Orientation="Horizontal" Padding="6" Spacing="6" Margin="0">
+
+        <skia:SKCanvasView x:Name="canvasview" PaintSurface="OnPaintCanvas"
+                           WidthRequest="36" HeightRequest="36"
+                           VerticalOptions="Center" HorizontalOptions="Start" />
+
+        <Label x:Name="label" Text="{Binding Number, StringFormat='Item number {0}'}"
+               VerticalOptions="Center" HorizontalOptions="FillAndExpand" />
+
+    </StackLayout>
+
+</ViewCell>
